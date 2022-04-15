@@ -1,0 +1,107 @@
+body {
+  background: rgb(138, 138, 163);
+  width: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background: rgb(138, 138, 163);
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container > div {
+  width: 60px;
+  height: 340px;
+  background-color: #3163c8;
+}
+
+.container > div > div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 100%;
+  margin: 4px;
+  background-color: rgb(138, 138, 163);
+  position: relative;
+}
+
+.red-box {
+  background-color: #8b2424 !important;
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  animation: move;
+  animation-duration: 0.2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.yellow-box {
+  background-color: #f2b914 !important;
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  animation: move;
+  animation-duration: 0.2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-2000px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+#winner {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: flash;
+  animation-iteration-count: 9;
+  animation-duration: 1s;
+  font-size: 40px;
+}
+.no-click {
+  pointer-events: none;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(2.5);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+button{
+    background-color: #3163c8;
+    font-size: 22px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
